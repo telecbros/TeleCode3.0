@@ -128,3 +128,25 @@ void rm_lword(char *ptr)
 	}
 	*ptr = '\0';
 }
+
+char* char_to_string(char c){
+    char* str = malloc(2);
+    str[0] = c;
+    str[1] = '\0';
+    return str;
+}
+
+char** split(char* str, char delimiter){
+    char** result = malloc((nchr(str, delimiter)+1) * sizeof(char*) + sizeof(NULL));
+    char* delimiter_str = char_to_string(delimiter);
+    char* token = strtok(str, delimiter_str);
+    int i = 0;
+    
+    while(token != NULL){
+        result[i] = token;
+        i++;
+        token = strtok(NULL, delimiter_str);
+    }
+    result[i] = NULL; //Añadimos Null al final del array
+    return result;
+}
