@@ -30,3 +30,11 @@ int is_lword(char *ptr, char *word);
 
 //Elimina la última palabra de string
 void rm_lword(char *ptr);
+
+char* char_to_string(char c);
+
+/* Splitea en base a un delimitador. Retorna un puntero que apunta 
+a un array de string (punteros de tipo char).
+IMPORTANTE: El último elemento del array contiene un null para
+detectar el final del array.*/
+char** split(char* str, char delimiter);
