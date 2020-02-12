@@ -1,0 +1,32 @@
+----------- Lectura de datos en python -----------
+
+N = int(sys.stdin.readline())
+for case in range(N):
+    line = sys.stdin.readline()
+    if "\n" in line:
+        line = line[:-1]
+        
+----------- Lectura de datos en C -----------
+
+enum{
+    MaxInt = 12, //Max len of a int in a string(including '\n' and '\0')
+    LenLine = 1000, //Añadido \n y \0
+};
+
+int main() {
+    char* cases_str = malloc(MaxInt);
+    char* line = malloc(LenLine);
+    int cases;
+    int i;
+
+    fgets(cases_str, MaxInt, stdin);
+    cases = atoi(cases_str);
+    free(cases_str);
+
+    for(i = 0; i < cases; i++){
+        fgets(line, LenLine, stdin);
+        take_case(line);
+        free(line);
+    }
+    return 0;
+}
