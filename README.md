@@ -8,9 +8,11 @@
     5. Si piensas que puede haber problemas con el redondeo de decimales, usa la función n_nines(está en la rama).
 - C
     1. Mucho cuidado en la declaración de variables. Ajusta bien la memoria reservada para cada variable.
+    2. Deja este puto lenguaje de mierda como última opción.
 - Consideraciones generales:
     1. Prueba los programas en los valores límites de las variables.
     2. Si el programa te da timeout, juega eliminando bloques de tu código para detectar cuál es el que más tarda.
+    3. Si tú prgrama falla, intenta ejecutarlo en linux para detectar errores.
     
 
 > La programación es una carrera entre los desarrolladores, intentando construir mayores y mejores programas a prueba de idiotas, y el universo, intentanto producir mayores y mejores idiotas. Por ahora va ganando el Universo
